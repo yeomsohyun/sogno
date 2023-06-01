@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> input </title>
+    <style>
+        .quantity {
+            position: relative;
+        }
+
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+
+        .quantity input {
+            width: 45px;
+            height: 42px;
+            line-height: 1.65;
+            float: left;
+            display: block;
+            padding: 0;
+            margin: 0 20px;
+            border: none;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .quantity input:focus {
+            outline: 0;
+        }
+
+        .quantity-nav {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 42px;
+        }
+
+        .quantity-button {
+            position: relative;
+            cursor: pointer;
+
+            text-align: center;
+
+            font-size: 13px;
+            font-family: "Trebuchet MS", Helvetica, sans-serif !important;
+            line-height: 1.7;
+
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+        }
+
+        .quantity-button.quantity-up {
+            position: absolute;
+            height: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+        }
+
+        .quantity-button.quantity-down {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            height: 50%;
+        }
+
+        .numb_box {
+            border: 1px solid #494949;
+            height: 42px;
+            width: 85px;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="quantity">
+        <div class="numb_box">
+            <input type="number" min="1" max="9" step="1" value="1">
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <!--숫자 더하기 빼기 부분은 js파일에서 수정하세요!-->
+</body>
+
+</html>
